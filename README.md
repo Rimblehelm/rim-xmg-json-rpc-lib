@@ -1,4 +1,13 @@
+
 # rim-xmg-json-rpc-lib
+
+## Badges
+
+[![npm version](https://img.shields.io/npm/v/rim-xmg-json-rpc-lib.svg)](https://www.npmjs.com/package/rim-xmg-json-rpc-lib)
+[![build](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/ci.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions)
+[![tests](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/test.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions)
+[![license](https://img.shields.io/github/license/Rimblehelm/rim-xmg-json-rpc-lib.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Rimblehelm/rim-xmg-json-rpc-lib.svg?style=social)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/stargazers)
 
 A TypeScript library for interacting with Coin Magi (XMG) JSON-RPC endpoints. Provides client, request, response, and error handling utilities for building applications and tools that communicate with XMG nodes.
 
@@ -68,7 +77,7 @@ console.log(response.result);
 - Source code: [`src/`](src/)
 - Build: `npm run build`
 - Lint: `npm run lint`
-- Test: (add your test instructions here)
+- Test: `npm run test` (uses Vitest, see `.env.testing` for test environment)
 
 ## License
 
