@@ -1,0 +1,46 @@
+{
+	"name": "rim-xmg-json-rpc-lib",
+	"version": "0.0.1",
+	"description": "A TypeScript library for RPC utilities interfacing with the Coin Magi (XMG) cryptocurrency blockchain.",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc --project ./tsconfig.json",
+		"lint": "eslint \"./src/**/*.ts\"",
+		"typecheck": "tsc --noEmit --project ./tsconfig.json",
+		"test": "vitest run",
+		"clean": "rimraf dist",
+		"prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build"
+	},
+	"keywords": [
+		"json-rpc",
+		"rpc-client",
+		"xmg",
+		"coin-magi",
+		"magi-coin",
+		"blockchain",
+		"typescript",
+		"crypto",
+		"library",
+		"cryptocurrency"
+	],
+	"author": "Michael Kelly <micrimblehelm@aol.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^24.10.1",
+		"@typescript-eslint/eslint-plugin": "^7.0.0",
+		"@typescript-eslint/parser": "^7.0.0",
+		"dotenv": "^17.2.3",
+		"eslint": "^8.56.0",
+		"eslint-config-standard-with-typescript": "^43.0.1",
+		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-n": "^17.23.1",
+		"eslint-plugin-promise": "^7.2.1",
+		"rimraf": "^5.0.0",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.8"
+	}
+}

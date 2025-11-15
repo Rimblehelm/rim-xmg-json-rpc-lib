@@ -1,0 +1,1 @@
+{"version":3,"file":"XMGJsonRpcError.js","sourceRoot":"","sources":["../src/XMGJsonRpcError.ts"],"names":[],"mappings":"AAKA,MAAM,CAAC,OAAO,OAAO,eAAe;IAIlC,YAAa,IAAY,EAAE,OAAe;QACxC,IAAI,CAAC,IAAI,GAAG,IAAI,CAAA;QAChB,IAAI,CAAC,OAAO,GAAG,OAAO,CAAA;IACxB,CAAC;CACF"}
