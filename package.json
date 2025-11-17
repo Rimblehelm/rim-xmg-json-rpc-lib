@@ -14,7 +14,7 @@
 		"test": "npm run test:unit",
 		"test:unit": "vitest run tests/unit",
 		"test:integration": "vitest run tests/integration",
-		"coverage": "vitest run --coverage tests/unit",
+		"coverage": "vitest --config vitest.config.cjs run --coverage tests/unit",
 		"coveralls": "npx coveralls < coverage/lcov.info",
 		"clean": "rimraf dist",
 		"prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build"
