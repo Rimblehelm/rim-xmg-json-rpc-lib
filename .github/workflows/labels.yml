@@ -1,0 +1,61 @@
+name: Manage Labels
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create_labels:
+    name: Create or update repository labels
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create/update labels via REST API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          labels='[
+            {"name":"bug","color":"d73a4a","description":"Something isn't working"},
+            {"name":"enhancement","color":"a2eeef","description":"New feature or request"},
+            {"name":"needs-triage","color":"ffcc00","description":"Needs triage"},
+            {"name":"help wanted","color":"008672","description":"Extra attention requested"},
+            {"name":"documentation","color":"0075ca","description":"Documentation changes"},
+            {"name":"good first issue","color":"7057ff","description":"Good for newcomers"},
+            {"name":"duplicate","color":"cfd3d7","description":"Duplicate issue"},
+            {"name":"wontfix","color":"ffffff","description":"Will not fix"}
+          ]'
+
+          repo_full="$GITHUB_REPOSITORY"
+          owner="${repo_full%%/*}"
+          repo="${repo_full##*/}"
+
+          echo "Managing labels for $owner/$repo"
+
+          echo "$labels" | jq -c '.[]' | while read -r label; do
+            name=$(echo "$label" | jq -r '.name')
+            color=$(echo "$label" | jq -r '.color')
+            desc=$(echo "$label" | jq -r '.description')
+
+            payload=$(jq -n --arg name "$name" --arg color "$color" --arg desc "$desc" '{name:$name, color:$color, description:$desc}')
+
+            # Try to create the label
+            http_code=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$owner/$repo/labels" \
+              -d "$payload")
+
+            if [ "$http_code" = "201" ]; then
+              echo "Created label: $name"
+            elif [ "$http_code" = "422" ]; then
+              # Already exists — update it
+              curl -s -X PATCH \
+                -H "Authorization: token $GITHUB_TOKEN" \
+                -H "Accept: application/vnd.github+json" \
+                "https://api.github.com/repos/$owner/$repo/labels/$(jq -rn --arg v "$name" '$v|@uri')" \
+                -d "$payload" >/dev/null
+              echo "Updated label: $name"
+            else
+              echo "Unexpected response $http_code for label $name"
+            fi
+          done
