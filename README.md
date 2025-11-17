@@ -9,6 +9,13 @@
 [![coverage (Coveralls)](https://coveralls.io/repos/github/Rimblehelm/rim-xmg-json-rpc-lib/badge.svg?branch=master)](https://coveralls.io/github/Rimblehelm/rim-xmg-json-rpc-lib?branch=master)
 [![coverage (workflow)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/coverage.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/coverage.yml)
 [![license](https://img.shields.io/github/license/Rimblehelm/rim-xmg-json-rpc-lib.svg)](LICENSE)
+
+### Coverage badge note
+
+- **Coveralls badge:** points to the Coveralls report for this repository at `https://coveralls.io/github/Rimblehelm/rim-xmg-json-rpc-lib`. It displays the most recent coverage summary reported by the workflow.
+- **Coverage workflow badge:** links to the GitHub Actions run for `.github/workflows/coverage.yml`, which runs tests with coverage and posts `coverage/lcov.info` to Coveralls.
+
+To allow the workflow to submit coverage to Coveralls, add a repository secret named `COVERALLS_REPO_TOKEN` in the GitHub repository settings (Settings → Secrets → Actions). You can obtain the token from your Coveralls project settings if required. Public repositories sometimes allow reporting without a token, but adding the secret ensures reliable uploads.
 [![GitHub stars](https://img.shields.io/github/stars/Rimblehelm/rim-xmg-json-rpc-lib.svg?style=social)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/stargazers)
 
 A TypeScript library for interacting with Coin Magi (XMG) JSON-RPC endpoints. Provides client, request, response, and error handling utilities for building applications and tools that communicate with XMG nodes.
