@@ -100,6 +100,18 @@ console.log(response.result);
 - Lint: `npm run lint`
 - Test: `npm run test` (uses Vitest, see `.env.testing` for test environment)
 
+### CI Vitest config
+
+- **Why:** On GitHub Actions the test runner previously attempted to bundle the TypeScript `vitest.config.ts` with Vite which pulled in Vite's ESM modules and caused an `ERR_REQUIRE_ESM` startup error. To avoid ESM/CJS interop issues on the hosted runners, the CI uses a CommonJS config file.
+- **What we do:** The repository includes `vitest.config.cjs` (CommonJS). The `coverage` npm script explicitly uses that config (`vitest --config vitest.config.cjs run --coverage tests/unit`) so CI runs reliably.
+- **Local development:** You can still use the TypeScript config locally if you prefer; CI will prefer the CJS config. To run coverage locally using the same config as CI:
+
+```bash
+npm run coverage
+```
+
+This keeps CI deterministic and avoids runtime bundling differences between local and hosted environments.
+
 ### Local testing
 
 - Copy the example env file for local testing:
