@@ -1,0 +1,203 @@
+﻿2025-11-17T23:03:02.3311917Z Current runner version: '2.329.0'
+2025-11-17T23:03:02.3343217Z ##[group]Runner Image Provisioner
+2025-11-17T23:03:02.3344409Z Hosted Compute Agent
+2025-11-17T23:03:02.3345274Z Version: 20251016.436
+2025-11-17T23:03:02.3346314Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-11-17T23:03:02.3347476Z Build Date: 2025-10-15T20:44:12Z
+2025-11-17T23:03:02.3348392Z ##[endgroup]
+2025-11-17T23:03:02.3349501Z ##[group]Operating System
+2025-11-17T23:03:02.3350369Z Ubuntu
+2025-11-17T23:03:02.3351115Z 24.04.3
+2025-11-17T23:03:02.3352015Z LTS
+2025-11-17T23:03:02.3352704Z ##[endgroup]
+2025-11-17T23:03:02.3353467Z ##[group]Runner Image
+2025-11-17T23:03:02.3354424Z Image: ubuntu-24.04
+2025-11-17T23:03:02.3355249Z Version: 20251112.124.1
+2025-11-17T23:03:02.3356947Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251112.124/images/ubuntu/Ubuntu2404-Readme.md
+2025-11-17T23:03:02.3359826Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251112.124
+2025-11-17T23:03:02.3361571Z ##[endgroup]
+2025-11-17T23:03:02.3363295Z ##[group]GITHUB_TOKEN Permissions
+2025-11-17T23:03:02.3365683Z Contents: read
+2025-11-17T23:03:02.3366640Z Metadata: read
+2025-11-17T23:03:02.3367500Z Packages: read
+2025-11-17T23:03:02.3368274Z ##[endgroup]
+2025-11-17T23:03:02.3371763Z Secret source: Actions
+2025-11-17T23:03:02.3373221Z Prepare workflow directory
+2025-11-17T23:03:02.3838485Z Prepare all required actions
+2025-11-17T23:03:02.3896212Z Getting action download info
+2025-11-17T23:03:02.6774381Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-11-17T23:03:02.7748897Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-11-17T23:03:02.9469523Z Complete job name: coverage
+2025-11-17T23:03:03.0178167Z ##[group]Run actions/checkout@v4
+2025-11-17T23:03:03.0179004Z with:
+2025-11-17T23:03:03.0179677Z   repository: Rimblehelm/rim-xmg-json-rpc-lib
+2025-11-17T23:03:03.0180444Z   token: ***
+2025-11-17T23:03:03.0180854Z   ssh-strict: true
+2025-11-17T23:03:03.0181249Z   ssh-user: git
+2025-11-17T23:03:03.0181648Z   persist-credentials: true
+2025-11-17T23:03:03.0182107Z   clean: true
+2025-11-17T23:03:03.0182512Z   sparse-checkout-cone-mode: true
+2025-11-17T23:03:03.0182992Z   fetch-depth: 1
+2025-11-17T23:03:03.0183376Z   fetch-tags: false
+2025-11-17T23:03:03.0183771Z   show-progress: true
+2025-11-17T23:03:03.0184168Z   lfs: false
+2025-11-17T23:03:03.0184531Z   submodules: false
+2025-11-17T23:03:03.0184933Z   set-safe-directory: true
+2025-11-17T23:03:03.0185617Z ##[endgroup]
+2025-11-17T23:03:03.1266282Z Syncing repository: Rimblehelm/rim-xmg-json-rpc-lib
+2025-11-17T23:03:03.1268453Z ##[group]Getting Git version info
+2025-11-17T23:03:03.1269533Z Working directory is '/home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib'
+2025-11-17T23:03:03.1270828Z [command]/usr/bin/git version
+2025-11-17T23:03:03.1344737Z git version 2.51.2
+2025-11-17T23:03:03.1371497Z ##[endgroup]
+2025-11-17T23:03:03.1394139Z Temporarily overriding HOME='/home/runner/work/_temp/7358dc75-7ccc-40f5-b71e-99bce4dd2102' before making global git config changes
+2025-11-17T23:03:03.1395748Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-17T23:03:03.1399927Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib
+2025-11-17T23:03:03.1437867Z Deleting the contents of '/home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib'
+2025-11-17T23:03:03.1441877Z ##[group]Initializing the repository
+2025-11-17T23:03:03.1445954Z [command]/usr/bin/git init /home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib
+2025-11-17T23:03:03.1547237Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-11-17T23:03:03.1548762Z hint: is subject to change. To configure the initial branch name to use in all
+2025-11-17T23:03:03.1550073Z hint: of your new repositories, which will suppress this warning, call:
+2025-11-17T23:03:03.1551597Z hint:
+2025-11-17T23:03:03.1552472Z hint: 	git config --global init.defaultBranch <name>
+2025-11-17T23:03:03.1553224Z hint:
+2025-11-17T23:03:03.1553943Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-11-17T23:03:03.1555126Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-11-17T23:03:03.1555989Z hint:
+2025-11-17T23:03:03.1556610Z hint: 	git branch -m <name>
+2025-11-17T23:03:03.1557151Z hint:
+2025-11-17T23:03:03.1557858Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-11-17T23:03:03.1559691Z Initialized empty Git repository in /home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/.git/
+2025-11-17T23:03:03.1562847Z [command]/usr/bin/git remote add origin https://github.com/Rimblehelm/rim-xmg-json-rpc-lib
+2025-11-17T23:03:03.1598428Z ##[endgroup]
+2025-11-17T23:03:03.1599883Z ##[group]Disabling automatic garbage collection
+2025-11-17T23:03:03.1603384Z [command]/usr/bin/git config --local gc.auto 0
+2025-11-17T23:03:03.1633125Z ##[endgroup]
+2025-11-17T23:03:03.1634340Z ##[group]Setting up auth
+2025-11-17T23:03:03.1640581Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-17T23:03:03.1671277Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-17T23:03:03.2015491Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-17T23:03:03.2047341Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-17T23:03:03.2274557Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-11-17T23:03:03.2312800Z ##[endgroup]
+2025-11-17T23:03:03.2313641Z ##[group]Fetching the repository
+2025-11-17T23:03:03.2321757Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +04e0d82afc6e86668cbafc4ef7ef11360cee755f:refs/remotes/origin/master
+2025-11-17T23:03:03.3884744Z From https://github.com/Rimblehelm/rim-xmg-json-rpc-lib
+2025-11-17T23:03:03.3885835Z  * [new ref]         04e0d82afc6e86668cbafc4ef7ef11360cee755f -> origin/master
+2025-11-17T23:03:03.3917900Z ##[endgroup]
+2025-11-17T23:03:03.3918724Z ##[group]Determining the checkout info
+2025-11-17T23:03:03.3920510Z ##[endgroup]
+2025-11-17T23:03:03.3925586Z [command]/usr/bin/git sparse-checkout disable
+2025-11-17T23:03:03.3969849Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-11-17T23:03:03.3998092Z ##[group]Checking out the ref
+2025-11-17T23:03:03.4001914Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-11-17T23:03:03.4086138Z Reset branch 'master'
+2025-11-17T23:03:03.4089824Z branch 'master' set up to track 'origin/master'.
+2025-11-17T23:03:03.4095875Z ##[endgroup]
+2025-11-17T23:03:03.4129963Z [command]/usr/bin/git log -1 --format=%H
+2025-11-17T23:03:03.4152066Z 04e0d82afc6e86668cbafc4ef7ef11360cee755f
+2025-11-17T23:03:03.4388614Z ##[group]Run actions/setup-node@v4
+2025-11-17T23:03:03.4389282Z with:
+2025-11-17T23:03:03.4389637Z   node-version: 18
+2025-11-17T23:03:03.4390025Z   always-auth: false
+2025-11-17T23:03:03.4390437Z   check-latest: false
+2025-11-17T23:03:03.4390994Z   token: ***
+2025-11-17T23:03:03.4391348Z ##[endgroup]
+2025-11-17T23:03:03.6167775Z Attempting to download 18...
+2025-11-17T23:03:04.0370758Z Acquiring 18.20.8 - x64 from https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-x64.tar.gz
+2025-11-17T23:03:04.3903329Z Extracting ...
+2025-11-17T23:03:04.4004335Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/efd942b8-b519-450d-93dc-e1572969c0c4 -f /home/runner/work/_temp/97bb8ab6-a289-4f6c-af87-350132d02378
+2025-11-17T23:03:05.3663202Z Adding to the cache ...
+2025-11-17T23:03:06.9727360Z ##[group]Environment details
+2025-11-17T23:03:07.2159545Z node: v18.20.8
+2025-11-17T23:03:07.2160137Z npm: 10.8.2
+2025-11-17T23:03:07.2160356Z yarn: 1.22.22
+2025-11-17T23:03:07.2170870Z ##[endgroup]
+2025-11-17T23:03:07.2322714Z ##[group]Run npm ci
+2025-11-17T23:03:07.2323057Z [36;1mnpm ci[0m
+2025-11-17T23:03:07.2361473Z shell: /usr/bin/bash -e {0}
+2025-11-17T23:03:07.2361793Z ##[endgroup]
+2025-11-17T23:03:07.7994209Z npm warn EBADENGINE Unsupported engine {
+2025-11-17T23:03:07.7994825Z npm warn EBADENGINE   package: 'vite@7.2.2',
+2025-11-17T23:03:07.7995390Z npm warn EBADENGINE   required: { node: '^20.19.0 || >=22.12.0' },
+2025-11-17T23:03:07.7995986Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-17T23:03:07.7996387Z npm warn EBADENGINE }
+2025-11-17T23:03:07.7996766Z npm warn EBADENGINE Unsupported engine {
+2025-11-17T23:03:07.7997185Z npm warn EBADENGINE   package: 'vitest@4.0.8',
+2025-11-17T23:03:07.7997797Z npm warn EBADENGINE   required: { node: '^20.0.0 || ^22.0.0 || >=24.0.0' },
+2025-11-17T23:03:07.7998408Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-17T23:03:07.7998815Z npm warn EBADENGINE }
+2025-11-17T23:03:09.2539023Z npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-11-17T23:03:09.6117087Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-11-17T23:03:09.6673578Z npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-11-17T23:03:09.8561878Z npm warn deprecated eslint-config-standard-with-typescript@43.0.1: Please use eslint-config-love, instead.
+2025-11-17T23:03:10.3450076Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2025-11-17T23:03:10.3539970Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2025-11-17T23:03:10.3654542Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-11-17T23:03:10.3882697Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-17T23:03:10.5841524Z npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-11-17T23:03:11.2894499Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2025-11-17T23:03:11.8084019Z 
+2025-11-17T23:03:11.8090947Z added 390 packages, and audited 391 packages in 4s
+2025-11-17T23:03:11.8092314Z 
+2025-11-17T23:03:11.8092579Z 151 packages are looking for funding
+2025-11-17T23:03:11.8093065Z   run `npm fund` for details
+2025-11-17T23:03:11.8189069Z 
+2025-11-17T23:03:11.8200481Z 6 vulnerabilities (2 moderate, 2 high, 2 critical)
+2025-11-17T23:03:11.8200927Z 
+2025-11-17T23:03:11.8201322Z To address issues that do not require attention, run:
+2025-11-17T23:03:11.8201871Z   npm audit fix
+2025-11-17T23:03:11.8202111Z 
+2025-11-17T23:03:11.8202454Z Some issues need review, and may require choosing
+2025-11-17T23:03:11.8203037Z a different dependency.
+2025-11-17T23:03:11.8203275Z 
+2025-11-17T23:03:11.8203479Z Run `npm audit` for details.
+2025-11-17T23:03:11.8561871Z ##[group]Run npm run coverage
+2025-11-17T23:03:11.8562163Z [36;1mnpm run coverage[0m
+2025-11-17T23:03:11.8596503Z shell: /usr/bin/bash -e {0}
+2025-11-17T23:03:11.8596738Z ##[endgroup]
+2025-11-17T23:03:11.9881985Z 
+2025-11-17T23:03:12.2948646Z [31mfailed to load config from /home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/vitest.config.ts[39m
+2025-11-17T23:03:12.2950039Z > rim-xmg-json-rpc-lib@0.0.4 coverage
+2025-11-17T23:03:12.2950647Z > vitest run --coverage tests/unit
+2025-11-17T23:03:12.2951491Z 
+2025-11-17T23:03:12.2952157Z 
+2025-11-17T23:03:12.2952970Z [31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Startup Error [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯⎯[39m
+2025-11-17T23:03:12.2969940Z Error [ERR_REQUIRE_ESM]: require() of ES Module /home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/index.js from /home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/config.cjs not supported.
+2025-11-17T23:03:12.2973574Z Instead change the require of index.js in /home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/config.cjs to a dynamic import() which is available in all CommonJS modules.
+2025-11-17T23:03:12.2976066Z     at _require.extensions.<computed> [as .js] (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/chunks/config.js:36532:9)
+2025-11-17T23:03:12.2977849Z     at Object.<anonymous> (/home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/config.cjs:5:12)
+2025-11-17T23:03:12.3068796Z     at _require.extensions.<computed> [as .js] (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/chunks/config.js:36532:9)
+2025-11-17T23:03:12.3070808Z     at Object.<anonymous> (/home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/vitest.config.ts:26:21)
+2025-11-17T23:03:12.3072596Z     at _require.extensions.<computed> [as .js] (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/chunks/config.js:36531:44)
+2025-11-17T23:03:12.3074588Z     at loadConfigFromBundledFile (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/chunks/config.js:36535:15)
+2025-11-17T23:03:12.3076503Z     at async bundleAndLoadConfigFile (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/chunks/config.js:36415:17)
+2025-11-17T23:03:12.3078358Z     at async loadConfigFromFile (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/chunks/config.js:36382:42)
+2025-11-17T23:03:12.3080319Z     at async resolveConfig (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/chunks/config.js:36031:22)
+2025-11-17T23:03:12.3082046Z     at async _createServer (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vite/dist/node/chunks/config.js:25979:67)
+2025-11-17T23:03:12.3083911Z     at async createViteServer (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/chunks/cli-api.BQ-bjcRi.js:8993:17)
+2025-11-17T23:03:12.3085792Z     at async createVitest (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/chunks/cli-api.BQ-bjcRi.js:12147:17)
+2025-11-17T23:03:12.3088382Z     at async prepareVitest (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/chunks/cli-api.BQ-bjcRi.js:12508:14)
+2025-11-17T23:03:12.3090409Z     at async startVitest (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/chunks/cli-api.BQ-bjcRi.js:12455:14)
+2025-11-17T23:03:12.3092137Z     at async start (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/chunks/cac.CfkWq8Qy.js:1361:15)
+2025-11-17T23:03:12.3094108Z     at async CAC.run (file:///home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib/node_modules/vitest/dist/chunks/cac.CfkWq8Qy.js:1343:2) {
+2025-11-17T23:03:12.3095106Z   code: 'ERR_REQUIRE_ESM'
+2025-11-17T23:03:12.3095448Z }
+2025-11-17T23:03:12.3095596Z 
+2025-11-17T23:03:12.3095607Z 
+2025-11-17T23:03:12.3095626Z 
+2025-11-17T23:03:12.3139680Z ##[error]Process completed with exit code 1.
+2025-11-17T23:03:12.3243348Z Post job cleanup.
+2025-11-17T23:03:12.4233816Z [command]/usr/bin/git version
+2025-11-17T23:03:12.4274604Z git version 2.51.2
+2025-11-17T23:03:12.4325041Z Temporarily overriding HOME='/home/runner/work/_temp/1ce1c7f2-014b-4841-9b66-256b7520c1a5' before making global git config changes
+2025-11-17T23:03:12.4327160Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-17T23:03:12.4328825Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rim-xmg-json-rpc-lib/rim-xmg-json-rpc-lib
+2025-11-17T23:03:12.4367379Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-17T23:03:12.4402968Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-17T23:03:12.4645062Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-17T23:03:12.4667435Z http.https://github.com/.extraheader
+2025-11-17T23:03:12.4680580Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-11-17T23:03:12.4713751Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-17T23:03:12.5052938Z Cleaning up orphan processes
