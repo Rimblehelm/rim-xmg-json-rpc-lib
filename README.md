@@ -131,6 +131,27 @@ npm run test
 
 Note: CI runs use repository secrets to provide `RPC_*` variables; do not commit real credentials.
 
+### Run all tests (unit + optional integration)
+
+- **What:** `npm run test:all` runs unit tests and will run integration tests only when `RPC_HOST` and `RPC_PORT` are set in your environment.
+- **Run only unit tests:**
+
+```powershell
+npm run test:all
+```
+
+- **Run unit + integration tests (requires running RPC daemon and env vars):**
+
+```powershell
+$env:RPC_HOST='localhost'
+$env:RPC_PORT='8232'
+$env:RPC_USER='rpcuser'   # optional
+$env:RPC_PASS='rpcpass'   # optional
+npm run test:all
+```
+
+- **Notes:** Integration tests are skipped automatically if `RPC_HOST` or `RPC_PORT` are not set to avoid accidental network calls in CI or local runs.
+
 ## License
 
 MIT
