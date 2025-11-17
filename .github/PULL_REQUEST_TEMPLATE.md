@@ -10,6 +10,11 @@ Describe the changes in this pull request.
 - [ ] If this change affects coverage, I ran `npm run coverage` to inspect results locally.
 - [ ] I updated documentation where relevant (`README.md`, `CONTRIBUTING.md`).
 
+## Labels & assignees
+
+- **Maintainers:** please add appropriate labels (e.g. `bug`, `enhancement`, `needs-triage`, `help wanted`) and assign reviewers or the primary maintainer (`@rimblehelm`) before merging.
+- **Contributors:** if you have a preferred assignee or label, add a note in the PR description and maintainers will triage.
+
 ## Related issues
 
 Fixes # (issue)

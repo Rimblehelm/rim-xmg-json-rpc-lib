@@ -2,8 +2,8 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: bug
-assignees: ''
+labels: [bug, needs-triage]
+assignees: [rimblehelm]
 ---
 
 Thanks for taking the time to report a bug! Please fill in the sections below.
