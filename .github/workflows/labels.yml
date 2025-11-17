@@ -17,7 +17,10 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           set -euo pipefail
-          labels='[
+
+          # Use a here-doc to avoid quoting/escaping issues when embedding JSON
+          cat > labels.json <<'JSON'
+          [
             {"name":"bug","color":"d73a4a","description":"Something isn't working"},
             {"name":"enhancement","color":"a2eeef","description":"New feature or request"},
             {"name":"needs-triage","color":"ffcc00","description":"Needs triage"},
@@ -34,7 +37,8 @@ jobs:
             {"name":"compatibility","color":"006b75","description":"Compatibility or platform-specific issues"},
             {"name":"breaking-change","color":"b60205","description":"Change that may break backwards compatibility"},
             {"name":"design","color":"f7c6c7","description":"Design or UX discussion"}
-          ]'
+          ]
+          JSON
 
           repo_full="$GITHUB_REPOSITORY"
           owner="${repo_full%%/*}"
@@ -42,7 +46,7 @@ jobs:
 
           echo "Managing labels for $owner/$repo"
 
-          echo "$labels" | jq -c '.[]' | while read -r label; do
+          jq -c '.[]' labels.json | while read -r label; do
             name=$(echo "$label" | jq -r '.name')
             color=$(echo "$label" | jq -r '.color')
             desc=$(echo "$label" | jq -r '.description')

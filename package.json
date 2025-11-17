@@ -11,7 +11,9 @@
 		"build": "tsc --project ./tsconfig.json",
 		"lint": "eslint \"./src/**/*.ts\"",
 		"typecheck": "tsc --noEmit --project ./tsconfig.json",
-		"test": "vitest run",
+		"test": "npm run test:unit",
+		"test:unit": "vitest run tests/unit",
+		"test:integration": "vitest run tests/integration",
 		"coverage": "vitest run --coverage",
 		"coveralls": "npx coveralls < coverage/lcov.info",
 		"clean": "rimraf dist",
@@ -35,15 +37,16 @@
 		"@types/node": "^24.10.1",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
+		"coveralls": "^3.1.1",
 		"dotenv": "^17.2.3",
 		"eslint": "^8.56.0",
 		"eslint-config-standard-with-typescript": "^43.0.1",
 		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-n": "^16.6.2",
 		"eslint-plugin-promise": "^6.0.0",
+		"nock": "^13.5.6",
 		"rimraf": "^5.0.0",
 		"typescript": "^5.3.3",
-		"vitest": "^4.0.8",
-		"coveralls": "^3.1.1"
+		"vitest": "^4.0.8"
 	}
 }

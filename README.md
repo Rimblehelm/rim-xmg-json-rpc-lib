@@ -100,6 +100,27 @@ console.log(response.result);
 - Lint: `npm run lint`
 - Test: `npm run test` (uses Vitest, see `.env.testing` for test environment)
 
+### Local testing
+
+- Copy the example env file for local testing:
+
+```powershell
+Copy-Item .env.example .env.testing
+```
+
+- Or set the required environment variables directly (PowerShell):
+
+```powershell
+$env:NODE_ENV='test'
+$env:RPC_HOST='localhost'
+$env:RPC_PORT='8232'
+$env:RPC_USER='rimblehelm'
+$env:RPC_PASS='h1h0m1n1ng'
+npm run test
+```
+
+Note: CI runs use repository secrets to provide `RPC_*` variables; do not commit real credentials.
+
 ## License
 
 MIT
