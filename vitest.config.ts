@@ -1,10 +1,3 @@
-import { defineConfig } from 'vitest/config';
-
-export default defineConfig({
-  test: {
-    globals: true,
-    environment: 'node',
-    setupFiles: ['./tests/setupTests.ts'],
-    include: ['tests/**/*.test.ts'],
-  },
-});
+// Disabled TypeScript config to avoid bundling with Vite in CI.
+// The CommonJS config `vitest.config.cjs` is used instead.
+export default {};
