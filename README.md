@@ -10,6 +10,8 @@
 [![coverage (workflow)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/coverage.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/coverage.yml)
 [![license](https://img.shields.io/github/license/Rimblehelm/rim-xmg-json-rpc-lib.svg)](LICENSE)
 
+> Contribution guidelines: see `CONTRIBUTING.md` for the development checklist, tests, linting and release steps.
+
 ### Coverage badge note
 
 - **Coveralls badge:** points to the Coveralls report for this repository at `https://coveralls.io/github/Rimblehelm/rim-xmg-json-rpc-lib`. It displays the most recent coverage summary reported by the workflow.
