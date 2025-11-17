@@ -2,6 +2,9 @@ name: Manage Labels
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+  push:
+    branches: [ master, main ]
 
 jobs:
   create_labels:
@@ -22,7 +25,15 @@ jobs:
             {"name":"documentation","color":"0075ca","description":"Documentation changes"},
             {"name":"good first issue","color":"7057ff","description":"Good for newcomers"},
             {"name":"duplicate","color":"cfd3d7","description":"Duplicate issue"},
-            {"name":"wontfix","color":"ffffff","description":"Will not fix"}
+            {"name":"wontfix","color":"ffffff","description":"Will not fix"},
+            {"name":"blocked","color":"5319e7","description":"Work is blocked by another task or dependency"},
+            {"name":"security","color":"b60205","description":"Security-related issue or vulnerability"},
+            {"name":"performance","color":"0e8a16","description":"Performance improvements or regressions"},
+            {"name":"refactor","color":"fbca04","description":"Code refactoring or cleanup without changing behavior"},
+            {"name":"tests","color":"c2e0c6","description":"Tests-related changes"},
+            {"name":"compatibility","color":"006b75","description":"Compatibility or platform-specific issues"},
+            {"name":"breaking-change","color":"b60205","description":"Change that may break backwards compatibility"},
+            {"name":"design","color":"f7c6c7","description":"Design or UX discussion"}
           ]'
 
           repo_full="$GITHUB_REPOSITORY"
