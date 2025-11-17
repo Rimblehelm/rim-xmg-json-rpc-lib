@@ -4,10 +4,14 @@
 ## Badges
 
 [![npm version](https://img.shields.io/npm/v/rim-xmg-json-rpc-lib.svg)](https://www.npmjs.com/package/rim-xmg-json-rpc-lib)
+[![npm downloads (weekly)](https://img.shields.io/npm/dw/rim-xmg-json-rpc-lib.svg)](https://www.npmjs.com/package/rim-xmg-json-rpc-lib)
 [![build](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/ci.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions)
 [![tests](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/test.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions)
 [![coverage (Coveralls)](https://coveralls.io/repos/github/Rimblehelm/rim-xmg-json-rpc-lib/badge.svg?branch=master)](https://coveralls.io/github/Rimblehelm/rim-xmg-json-rpc-lib?branch=master)
 [![coverage (workflow)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/coverage.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/coverage.yml)
+[![labels workflow](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/labels.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/labels.yml)
+[![release](https://img.shields.io/github/v/release/Rimblehelm/rim-xmg-json-rpc-lib.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/releases/latest)
+[![dependabot status](https://img.shields.io/badge/dependabot-up--to--date-brightgreen.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/security/dependabot)
 [![license](https://img.shields.io/github/license/Rimblehelm/rim-xmg-json-rpc-lib.svg)](LICENSE)
 
 > Contribution guidelines: see `CONTRIBUTING.md` for the development checklist, tests, linting and release steps.
