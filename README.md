@@ -6,6 +6,8 @@
 [![npm version](https://img.shields.io/npm/v/rim-xmg-json-rpc-lib.svg)](https://www.npmjs.com/package/rim-xmg-json-rpc-lib)
 [![build](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/ci.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions)
 [![tests](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/test.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions)
+[![coverage (Coveralls)](https://coveralls.io/repos/github/Rimblehelm/rim-xmg-json-rpc-lib/badge.svg?branch=master)](https://coveralls.io/github/Rimblehelm/rim-xmg-json-rpc-lib?branch=master)
+[![coverage (workflow)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/coverage.yml/badge.svg)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/actions/workflows/coverage.yml)
 [![license](https://img.shields.io/github/license/Rimblehelm/rim-xmg-json-rpc-lib.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Rimblehelm/rim-xmg-json-rpc-lib.svg?style=social)](https://github.com/Rimblehelm/rim-xmg-json-rpc-lib/stargazers)
 
