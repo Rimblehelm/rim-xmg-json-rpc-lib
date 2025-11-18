@@ -1,6 +1,6 @@
 {
 	"name": "rim-xmg-json-rpc-lib",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "A TypeScript library for RPC utilities interfacing with the Coin Magi (XMG) cryptocurrency blockchain.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
