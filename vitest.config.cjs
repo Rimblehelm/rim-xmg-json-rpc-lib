@@ -5,8 +5,8 @@ module.exports = {
     setupFiles: ['./tests/setupTests.ts'],
     include: ['tests/**/*.test.ts'],
     coverage: {
-      provider: 'c8',
-      reporter: ['lcov', 'html', 'text', 'json'],
+      provider: 'v8',
+      reporter: ['json', 'html', 'text'],
       reportsDirectory: 'coverage',
     },
   },
